@@ -1,0 +1,157 @@
+* {
+	font-family: serif;
+	font-weight: normal;
+	margin: 0;
+	}
+body {
+	background-color: lightyellow;
+	padding: 1em;
+	font-size: 16px;
+	}
+h1, h2 {
+	font-size: 2em;
+	line-height: 1em;
+	margin-bottom: 1em;
+	}
+p, ol, ul {
+	font-size: 1.1em;
+	line-height: 1.1em;
+	margin: 0 0 1em 0;
+	}
+	
+ol, ul {
+	padding-left: 0;
+	list-style-position: inside;
+	}
+a {
+	color: #4181C0;
+	font-family: inherit;
+	text-decoration: none;
+	}
+a:hover {
+	color: brown
+	}
+article {
+	margin-bottom: 5em;
+	}
+img {
+	border-radius: 1em;
+	margin-bottom: 1em;
+	}
+iframe {
+	border-radius: 1em;
+	aspect-ratio: 16 / 9;
+	margin-bottom: 1em;
+	}
+input[type=checkbox] {
+	display: none;
+	}
+
+/* elements with class applied */
+	
+.project-display {
+	display: flex
+	}
+.project-visuals {
+width: 33%;
+margin-right: 2em;
+	}
+.project-visual-h {
+	width: 100%
+	}
+.project-visual-h:hover {
+	width: 50vw;
+	position: relative;
+	z-index: 1;
+	}
+.project-visual-v {
+	width: 75%
+	}
+.project-visual-v:hover {
+	width: 40vw;
+	position: relative;
+	z-index: 1;
+	}
+.project-text {
+	max-width: 35em;
+	margin-right: auto;
+	}
+
+/* elements with id applied */
+
+#first-last-name {
+	display: block;
+	position: absolute;
+	top: .5em;
+	text-transform: uppercase;
+	z-index: 2;
+	}
+#matteo-proietti {
+	display: block;
+	position: absolute;
+	top: .5em;
+	padding-left: 4.5em;
+	z-index: 2;
+	}
+#about-link {
+	position: fixed;
+	top: .5em;
+	right: 1em;
+	}
+#projects-list {
+	display: block;
+	position: fixed;
+	bottom: 0em;
+	right: 1em;
+	text-align: right;
+	z-index: 2;
+	}
+#current {
+	margin: 10em -1em 0 -1em;
+	padding: 0;
+	white-space: nowrap;
+    overflow: hidden;s
+	}
+#current p {
+	font-size: 2em;
+	font-style: italic;
+	display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+	}
+@keyframes marquee {
+    0% {
+    	transform: translate(0, 0);
+    	}
+    100% {
+    	transform: translate(-100%, 0);
+    	}
+	}
+#projects {
+	margin-top: 2em;
+	}
+/* mobile adaptations */
+
+@media (max-width: 600px) {
+	.project-display {
+		flex-direction: column;
+		}
+	.project-visuals {
+		width: 100%
+		}
+	.project-visual-h:hover {
+		width: 100%
+		}
+	.project-visual-v:hover {
+		width: 75%;
+		}
+	#projects-list {
+		visibility: hidden;
+		}
+	}
+@media (min-width: 600px) {
+	#projects-list-button {
+		visibility: hidden;
+		}
+	
+	}
